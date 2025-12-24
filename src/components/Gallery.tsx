@@ -1,8 +1,8 @@
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { AYUSHI_PHOTOS } from '../constants';
-import { Photo } from '../types';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { AYUSHI_PHOTOS } from "../constants";
+import type { Photo } from "../types/Photo"
 
 const Gallery: React.FC = () => {
   const [filter, setFilter] = useState<string>('All');
