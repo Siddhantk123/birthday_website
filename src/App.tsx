@@ -19,7 +19,7 @@ const App: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Reverting to the confirmed working stable music track
-  const AUDIO_SOURCE = "./sound/happy-birthday.mp3";
+  const AUDIO_SOURCE = "./public/sound/happy-birthday.mp3";
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 1500);
