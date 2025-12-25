@@ -76,7 +76,6 @@ const App: React.FC = () => {
     // Handle Music Playback
     if (withMusic && audioRef.current) {
       try {
-        audioRef.current.load();
         const playPromise = audioRef.current.play();
         
         if (playPromise !== undefined) {
@@ -122,16 +121,16 @@ const App: React.FC = () => {
   };
 
   const retryAudio = () => {
-    if (audioRef.current) {
-      setAudioError(false);
-      audioRef.current.load();
-      setTimeout(() => {
-        audioRef.current?.play()
-          .then(() => setIsPlaying(true))
-          .catch(() => setAudioError(true));
-      }, 500);
-    }
+  if (!audioRef.current) return;
+
+  setAudioError(false);
+  audioRef.current.currentTime = 0;
+
+  audioRef.current.play()
+    .then(() => setIsPlaying(true))
+    .catch(() => setAudioError(true));
   };
+
 
   if (!isLoaded) {
     return (
@@ -149,12 +148,16 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen relative bg-[#0f172a] text-slate-200">
       <audio 
-        ref={audioRef} 
-        src={AUDIO_SOURCE} 
-        loop 
+        ref={audioRef}
+        src={AUDIO_SOURCE}
+        loop
         preload="auto"
+        onCanPlay={() => {
+          console.log("Audio loaded successfully");
+          setAudioError(false);
+        }}
         onError={() => {
-          if (showMain) setAudioError(true);
+          setAudioError(true);
         }}
       />
 
