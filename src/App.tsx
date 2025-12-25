@@ -9,6 +9,7 @@ import HeartfeltMessage from './components/HeartfeltMessage';
 import Features from './components/Features';
 import Footer from './components/Footer';
 import MusicPlayer from './components/MusicPlayer';
+import birthdayMusic from "./assets/happy-birthday.mp3";
 
 const App: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -19,7 +20,7 @@ const App: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Reverting to the confirmed working stable music track
-  const AUDIO_SOURCE = "/sounds/happy-birthday.mp3";
+  const AUDIO_SOURCE = birthdayMusic;
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 1500);
