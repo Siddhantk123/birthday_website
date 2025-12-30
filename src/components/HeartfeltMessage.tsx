@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Send } from 'lucide-react';
+import birthdayImage from '../assets/photos/birthday_center.jpg';
 
 const HeartfeltMessage: React.FC = () => {
   // TODO: Replace 'YOUR_PHONE_NUMBER' with your actual phone number including country code.
@@ -88,8 +89,29 @@ const HeartfeltMessage: React.FC = () => {
             >
               Happy Birthday. May this year be filled with as much happiness as you've given me.
             </motion.p>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1.9, duration: 0.8 }}
+                className="flex justify-center mt-10"
+              >
+              <img
+              src={birthdayImage}
+              alt="Birthday Memory"
+              className="
+                w-48 
+                md:w-65 
+                max-h-80 
+                object-cover 
+                rounded-2xl 
+                shadow-2xl 
+                border 
+                border-pink-500/20
+              "
+            />
+            </motion.div>
           </div>
-
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
