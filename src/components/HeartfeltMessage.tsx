@@ -8,7 +8,7 @@ const HeartfeltMessage: React.FC = () => {
   // TODO: Replace 'YOUR_PHONE_NUMBER' with your actual phone number including country code.
   // Example: '919876543210' (91 is country code for India, followed by the 10-digit number)
   const YOUR_PHONE_NUMBER = '918574205817'; 
-  const messageText = "Hi! I saw the beautiful website you made for me. Let's talk? ❤️";
+  const messageText = "Hello Siddhant! I saw the beautiful website you made for me. Thanks for the gift, let's talk and rebuid our friendship ❤️";
   const encodedMessage = encodeURIComponent(messageText);
   const whatsappUrl = `https://wa.me/${YOUR_PHONE_NUMBER}?text=${encodedMessage}`;
 
