@@ -15,6 +15,7 @@ import img10 from "./assets/photos/input_file_10.jpg";
 import img11 from "./assets/photos/input_file_11.jpg";
 import img12 from "./assets/photos/input_file_12.jpg";
 import img13 from "./assets/photos/input_file_13.jpg";
+import img15 from "./assets/photos/input_file_15.jpg";
 
 export const AYUSHI_PHOTOS: Photo[] = [
   { id: "1", url: img0, caption: "Grace and Devotion", category: "Simple" },
@@ -25,12 +26,13 @@ export const AYUSHI_PHOTOS: Photo[] = [
   { id: "6", url: img5, caption: "Serenity and Peace", category: "Simple" },
   { id: "7", url: img6, caption: "A Night to Remember", category: "Beautiful" },
   { id: "8", url: img7, caption: "Stunning in Magenta", category: "Beautiful" },
-  { id: "9", url: img8, caption: "Sunshine and Smiles", category: "Cute" },
+  { id: "9", url: img8, caption: "Sunshine and Smiles", category: "Beautiful" },
   { id: "10", url: img9, caption: "Natures Child", category: "Simple" },
   { id: "11", url: img10, caption: "Simple Happiness", category: "Simple" },
   { id: "12", url: img11, caption: "Shiva is everything", category: "Memories" },
   { id: "13", url: img12, caption: "The Ocean Breeze", category: "Memories" },
   { id: "14", url: img13, caption: "Special feeling", category: "Memories" },
+  { id: "15", url: img15, caption: "New year vibes", category: "Cute" }
 ];
 
 export const BIRTHDAY_DATE = "2026-01-07";
